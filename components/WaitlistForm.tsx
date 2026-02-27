@@ -51,8 +51,8 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
   if (status === "success") {
     return (
       <div className={`${variant === "hero" ? "max-w-md mx-auto" : ""}`}>
-        <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-6 text-center">
-          <p className="text-green-800 dark:text-green-200 font-medium">
+        <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
+          <p className="text-green-800 font-medium">
             You're in. We'll contact you when early access opens.
           </p>
         </div>
@@ -70,7 +70,7 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
           placeholder="you@domain.com"
           required
           disabled={status === "loading"}
-          className="flex-1 px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+          className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed bg-white text-gray-900"
         />
         <button
           type="submit"
@@ -82,7 +82,7 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
       </div>
       
       <div className="mt-3">
-        <label className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400 cursor-pointer">
+        <label className="flex items-start gap-2 text-sm text-gray-600 cursor-pointer">
           <input
             type="checkbox"
             checked={consent}
@@ -93,7 +93,7 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
           />
           <span>
             I agree to the{" "}
-            <Link href="/privacy" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 underline">
+            <Link href="/privacy" className="text-blue-600 hover:text-blue-700 underline">
               Privacy Policy
             </Link>
           </span>
@@ -101,11 +101,11 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
       </div>
 
       {errorMessage && (
-        <p className="mt-3 text-sm text-red-600 dark:text-red-400">{errorMessage}</p>
+        <p className="mt-3 text-sm text-red-600">{errorMessage}</p>
       )}
 
       {variant === "hero" && (
-        <p className="mt-3 text-sm text-gray-500 dark:text-gray-500 text-center">
+        <p className="mt-3 text-sm text-gray-500 text-center">
           No spam. Early access only.
         </p>
       )}
