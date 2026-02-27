@@ -103,12 +103,6 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
       {errorMessage && (
         <p className="mt-3 text-sm text-red-600">{errorMessage}</p>
       )}
-
-      {variant === "hero" && (
-        <p className="mt-3 text-sm text-gray-500 text-center">
-          No spam. Early access only.
-        </p>
-      )}
     </form>
   );
 }
