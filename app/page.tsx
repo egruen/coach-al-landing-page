@@ -17,7 +17,7 @@ export default function Home() {
           }}
         >
           {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-black/70"></div>
+          
 
           <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 w-full">
             <div className="text-center">
