@@ -235,7 +235,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="https://x.com/e_gruen"
+                href="https://x.com/eduard_gruen"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition text-sm"
@@ -243,7 +243,7 @@ export default function Home() {
                 Follow on X
               </a>
               <a
-                href="https://www.instagram.com/e_gruen/"
+                href="https://www.instagram.com/eduardgruen/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition text-sm"
