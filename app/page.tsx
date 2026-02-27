@@ -9,10 +9,11 @@ export default function Home() {
       <main>
         {/* Hero Section */}
         <section
-          className="relative min-h-[600px] flex items-center bg-cover bg-center bg-no-repeat"
+          className="relative min-h-[600px] flex items-center bg-cover bg-bottom bg-no-repeat"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=2070&auto=format&fit=crop')",
+              /*"url('https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=2070&auto=format&fit=crop')",*/
+              "url('/hero_bg.jpg')",
           }}
         >
           {/* Overlay for better text readability */}
