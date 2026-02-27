@@ -17,20 +17,22 @@ export default function Home() {
           }}
         >
           {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-white"></div>
+          <div className="absolute inset-0 bg-black/70"></div>
 
           <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 w-full">
             <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance drop-shadow-lg">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance [text-shadow:_0_2px_10px_rgb(0_0_0_/_80%)]">
                 Train for real events — with an AI coach that adapts to your
                 life.
               </h1>
-              <p className="text-xl sm:text-2xl text-white/90 mb-12 max-w-3xl mx-auto text-balance drop-shadow-md">
+              <p className="text-xl sm:text-2xl text-white mb-12 max-w-3xl mx-auto text-balance [text-shadow:_0_2px_8px_rgb(0_0_0_/_70%)]">
                 Coach Al turns your training data into clear daily guidance,
                 adjusts to recovery, and keeps you progressing without
                 guesswork.
               </p>
-              <WaitlistForm variant="hero" />
+              <div className="max-w-md mx-auto bg-white/55 p-6 rounded-xl shadow-2xl">
+                <WaitlistForm variant="hero" />
+              </div>
             </div>
           </div>
         </section>
