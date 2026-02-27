@@ -8,17 +8,26 @@ export default function Home() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-[600px] flex items-center bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url('https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=2070&auto=format&fit=crop')"}}>
+        <section
+          className="relative min-h-[600px] flex items-center bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=2070&auto=format&fit=crop')",
+          }}
+        >
           {/* Overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-white"></div>
-          
+
           <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 w-full">
             <div className="text-center">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance drop-shadow-lg">
-                Train for real events — with an AI coach that adapts to your life.
+                Train for real events — with an AI coach that adapts to your
+                life.
               </h1>
               <p className="text-xl sm:text-2xl text-white/90 mb-12 max-w-3xl mx-auto text-balance drop-shadow-md">
-                Coach Al turns your training data into clear daily guidance, adjusts to recovery, and keeps you progressing without guesswork.
+                Coach Al turns your training data into clear daily guidance,
+                adjusts to recovery, and keeps you progressing without
+                guesswork.
               </p>
               <WaitlistForm variant="hero" />
             </div>
@@ -33,13 +42,48 @@ export default function Home() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-6 text-lg text-gray-600">
               <p>
-                Most plans are static. Life isn't.<br />
-                You miss a session, sleep badly, or overload your week — and the plan keeps pushing anyway.
+                Most plans are static. Life isn't.
+                <br />
+                You miss a session, sleep badly, or overload your week — and the
+                plan keeps pushing anyway.
               </p>
               <p>
-                Athletes train for events, not generic goals.<br />
+                Athletes train for events, not generic goals.
+                <br />
                 You need coaching that reacts to what actually happens.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Build in Public Banner */}
+        <section className="bg-blue-50 py-16 sm:py-24">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Built in public. Every session tracked.
+            </h2>
+            <p className="text-lg text-gray-600 mb-8">
+              Follow the full journey — what the AI prescribes, what actually
+              happens, and what gets adapted along the way. Real training, real
+              data, no filter.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="https://x.com/eduard_gruen"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition text-sm shadow-sm"
+              >
+                Follow on X
+              </a>
+              <a
+                href="https://www.instagram.com/eduardgruen/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-gray-300 text-gray-900 font-medium rounded-lg hover:bg-gray-50 transition text-sm shadow-sm"
+              >
+                Follow on Instagram
+              </a>
             </div>
           </div>
         </section>
@@ -59,7 +103,8 @@ export default function Home() {
                   Set your event
                 </h3>
                 <p className="text-gray-600">
-                  Pick your target: race, multi-day hike, cycling event, or personal challenge.
+                  Pick your target: race, multi-day hike, cycling event, or
+                  personal challenge.
                 </p>
               </div>
               <div className="text-center">
@@ -70,7 +115,8 @@ export default function Home() {
                   Connect your data
                 </h3>
                 <p className="text-gray-600">
-                  Coach Al reads your training and recovery signals (like sleep, HRV, and effort trends).
+                  Coach Al reads your training and recovery signals (like sleep,
+                  HRV, and effort trends).
                 </p>
               </div>
               <div className="text-center">
@@ -81,7 +127,8 @@ export default function Home() {
                   Get adaptive coaching
                 </h3>
                 <p className="text-gray-600">
-                  Receive practical daily guidance and weekly adjustments based on your real progress.
+                  Receive practical daily guidance and weekly adjustments based
+                  on your real progress.
                 </p>
               </div>
             </div>
@@ -100,7 +147,8 @@ export default function Home() {
                   Event-driven planning
                 </h3>
                 <p className="text-gray-600">
-                  Train for the event on your calendar — not a one-size-fits-all template.
+                  Train for the event on your calendar — not a one-size-fits-all
+                  template.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
@@ -108,7 +156,8 @@ export default function Home() {
                   Adapts to recovery
                 </h3>
                 <p className="text-gray-600">
-                  When fatigue rises, Coach Al adjusts load before overtraining hits.
+                  When fatigue rises, Coach Al adjusts load before overtraining
+                  hits.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
@@ -116,7 +165,8 @@ export default function Home() {
                   Clear next actions
                 </h3>
                 <p className="text-gray-600">
-                  No dashboard paralysis. You get concrete "do this today" guidance.
+                  No dashboard paralysis. You get concrete "do this today"
+                  guidance.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
@@ -124,7 +174,8 @@ export default function Home() {
                   Multi-sport ready
                 </h3>
                 <p className="text-gray-600">
-                  Running, cycling, hiking, and strength in one coherent training logic.
+                  Running, cycling, hiking, and strength in one coherent
+                  training logic.
                 </p>
               </div>
             </div>
@@ -143,7 +194,9 @@ export default function Home() {
                   Is this a replacement for a human coach?
                 </h3>
                 <p className="text-gray-600">
-                  Coach Al handles structured planning and adaptive load decisions. It's designed to make high-quality coaching more accessible — and can also complement human coaching.
+                  Coach Al handles structured planning and adaptive load
+                  decisions. It's designed to make high-quality coaching more
+                  accessible — and can also complement human coaching.
                 </p>
               </div>
               <div>
@@ -151,7 +204,8 @@ export default function Home() {
                   Is this just another static training plan?
                 </h3>
                 <p className="text-gray-600">
-                  No. Coach Al is built to adapt when your week changes, recovery drops, or execution differs from plan.
+                  No. Coach Al is built to adapt when your week changes,
+                  recovery drops, or execution differs from plan.
                 </p>
               </div>
               <div>
@@ -159,7 +213,8 @@ export default function Home() {
                   Which sports are supported?
                 </h3>
                 <p className="text-gray-600">
-                  Initial focus is endurance and mountain-oriented training: running, cycling, hiking, and strength support.
+                  Initial focus is endurance and mountain-oriented training:
+                  running, cycling, hiking, and strength support.
                 </p>
               </div>
               <div>
@@ -167,7 +222,8 @@ export default function Home() {
                   What data do you use?
                 </h3>
                 <p className="text-gray-600">
-                  Training and recovery-related signals needed to personalize your plan. Data is used for coaching functionality.
+                  Training and recovery-related signals needed to personalize
+                  your plan. Data is used for coaching functionality.
                 </p>
               </div>
               <div>
@@ -175,7 +231,8 @@ export default function Home() {
                   When does access open?
                 </h3>
                 <p className="text-gray-600">
-                  We're currently onboarding early users via waitlist. Join now to get launch updates and early access priority.
+                  We're currently onboarding early users via waitlist. Join now
+                  to get launch updates and early access priority.
                 </p>
               </div>
             </div>
