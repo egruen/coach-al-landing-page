@@ -60,6 +60,11 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
     );
   }
 
+  const inputFocusClass = "focus:ring-blue-500";
+  const buttonClass = "bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white";
+  const privacyLinkClass = "text-blue-600 hover:text-blue-700";
+  const consentTextClass = "text-gray-600";
+
   return (
     <form onSubmit={handleSubmit} className={`${variant === "hero" ? "max-w-md mx-auto" : ""}`}>
       <div className="flex flex-col sm:flex-row gap-3">
@@ -70,19 +75,19 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
           placeholder="you@domain.com"
           required
           disabled={status === "loading"}
-          className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed bg-white text-gray-900"
+          className={`flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 ${inputFocusClass} focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed bg-white text-gray-900`}
         />
         <button
           type="submit"
           disabled={status === "loading"}
-          className="px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium rounded-lg transition disabled:cursor-not-allowed whitespace-nowrap"
+          className={`px-6 py-3 ${buttonClass} font-medium rounded-lg transition disabled:cursor-not-allowed whitespace-nowrap`}
         >
           {status === "loading" ? "Joining..." : variant === "hero" ? "Get Early Access" : "Join Waitlist"}
         </button>
       </div>
       
       <div className="mt-3">
-        <label className="flex items-start gap-2 text-sm text-gray-600 cursor-pointer">
+        <label className={`flex items-start gap-2 text-sm ${consentTextClass} cursor-pointer`}>
           <input
             type="checkbox"
             checked={consent}
@@ -93,7 +98,7 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
           />
           <span>
             I agree to the{" "}
-            <Link href="/privacy" className="text-blue-600 hover:text-blue-700 underline">
+            <Link href="/privacy" className={`${privacyLinkClass} underline`}>
               Privacy Policy
             </Link>
           </span>
