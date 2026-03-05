@@ -104,7 +104,7 @@ export default function Home() {
                   2
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Connect your Garmin
+                  Connect your fitness tracker
                 </h3>
                 <p className="text-gray-600">
                   Sleep, HRV, training load, Body Battery — Coach AL reads your recovery state every day. Bad night? Today&apos;s session adapts before you lace up.
@@ -433,7 +433,7 @@ export default function Home() {
                   What data do I need?
                 </h3>
                 <p className="text-gray-600">
-                  A Garmin watch. Coach AL reads sleep, HRV, training load, and Body Battery — data you&apos;re already collecting. No extra wearable required.
+                  A fitness watch. Coach AL reads sleep, HRV, training load, and Body Battery — data you&apos;re already collecting. No extra wearable required.
                 </p>
               </div>
               <div className="p-6">
