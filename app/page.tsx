@@ -82,7 +82,7 @@ export default function Home() {
         <section id="how-it-works" className="bg-white py-16 sm:py-24">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-              How Coach Al works
+              How Coach AL works
             </h2>
             <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
               Three steps. One plan. Every sport covered.
@@ -96,7 +96,7 @@ export default function Home() {
                   Add your events
                 </h3>
                 <p className="text-gray-600">
-                  A trek in March, a race in May, a tri in July. Coach Al builds one phased plan that prepares you for each deadline — no overlapping chaos, no manual replanning.
+                  A trek in March, a race in May, a tri in July. Coach AL builds one phased plan that prepares you for each deadline — no overlapping chaos, no manual replanning.
                 </p>
               </div>
               <div className="text-center px-2">
@@ -107,7 +107,7 @@ export default function Home() {
                   Connect your Garmin
                 </h3>
                 <p className="text-gray-600">
-                  Sleep, HRV, training load, Body Battery — Coach Al reads your recovery state every day. Bad night? Today&apos;s session adapts before you lace up.
+                  Sleep, HRV, training load, Body Battery — Coach AL reads your recovery state every day. Bad night? Today&apos;s session adapts before you lace up.
                 </p>
               </div>
               <div className="text-center px-2">
@@ -129,7 +129,7 @@ export default function Home() {
         <section className="bg-gray-50 py-16 sm:py-24">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-              What makes Coach Al different
+              What makes Coach AL different
             </h2>
             <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
               Not another tracker. Not another dashboard. An actual coach.
@@ -140,7 +140,7 @@ export default function Home() {
                   🎯 Event-driven, not sport-locked
                 </h3>
                 <p className="text-gray-600">
-                  You don&apos;t train &quot;for cycling.&quot; You train for Bike The Rock on May 16. Coach Al works backward from your event dates and phases your training automatically — then transitions to the next goal.
+                  You don&apos;t train &quot;for cycling.&quot; You train for Bike The Rock on May 16. Coach AL works backward from your event dates and phases your training automatically — then transitions to the next goal.
                 </p>
               </div>
               <div>
@@ -148,7 +148,7 @@ export default function Home() {
                   🔄 Recovery drives the plan, not the calendar
                 </h3>
                 <p className="text-gray-600">
-                  Most apps schedule deload every 4th week — even if you&apos;re fine, or wrecked on week 2. Coach Al reads HRV, sleep, and cumulative load, then decides. Feedback loops beat calendars.
+                  Most apps schedule deload every 4th week — even if you&apos;re fine, or wrecked on week 2. Coach AL reads HRV, sleep, and cumulative load, then decides. Feedback loops beat calendars.
                 </p>
               </div>
               <div>
@@ -156,7 +156,7 @@ export default function Home() {
                   💪 Strength is built in, not bolted on
                 </h3>
                 <p className="text-gray-600">
-                  Hiking prep needs lower body and core work. Coach Al schedules strength sessions around your endurance training — not as a separate app you have to manage yourself.
+                  Hiking prep needs lower body and core work. Coach AL schedules strength sessions around your endurance training — not as a separate app you have to manage yourself.
                 </p>
               </div>
               <div>
@@ -164,7 +164,7 @@ export default function Home() {
                   ⏱️ Under 10 hours a week
                 </h3>
                 <p className="text-gray-600">
-                  You have a job, kids, and a life. Coach Al builds plans that fit your actual time — not a pro athlete&apos;s schedule. If the plan can&apos;t survive real life, it&apos;s a bad plan.
+                  You have a job, kids, and a life. Coach AL builds plans that fit your actual time — not a pro athlete&apos;s schedule. If the plan can&apos;t survive real life, it&apos;s a bad plan.
                 </p>
               </div>
               <div>
@@ -172,7 +172,7 @@ export default function Home() {
                   🧠 AI that observes, decides, and acts
                 </h3>
                 <p className="text-gray-600">
-                  Not an AI that writes motivational paragraphs about your run. Not pace adjustments after a PB. Coach Al reads your data and changes your plan. Every day.
+                  Not an AI that writes motivational paragraphs about your run. Not pace adjustments after a PB. Coach AL reads your data and changes your plan. Every day.
                 </p>
               </div>
               <div>
@@ -180,7 +180,7 @@ export default function Home() {
                   💰 One coach replaces three
                 </h3>
                 <p className="text-gray-600">
-                  A human running coach: €200/mo. A cycling coach: €150/mo. A strength coach: €100/mo. Coach Al handles all your sports for a fraction of one.
+                  A human running coach: €200/mo. A cycling coach: €150/mo. A strength coach: €100/mo. Coach AL handles all your sports for a fraction of one.
                 </p>
               </div>
             </div>
@@ -195,7 +195,7 @@ export default function Home() {
                 The proof is in the prep
               </h2>
               <p className="text-lg text-gray-600 text-center mb-12">
-                Coach Al is being built and tested in public — by the founder training for 5 events across 5 sports in 5 months. Real sessions, real data, real adaptation.
+                Coach AL is being built and tested in public — by the founder training for 5 events across 5 sports in 5 months. Real sessions, real data, real adaptation.
               </p>
 
               {/* Event Timeline */}
@@ -289,7 +289,7 @@ export default function Home() {
               You&apos;ve tried the alternatives
             </h2>
             <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-              Here&apos;s how Coach Al fills the gaps they leave.
+              Here&apos;s how Coach AL fills the gaps they leave.
             </p>
             <div className="max-w-3xl mx-auto overflow-x-auto bg-white border border-gray-200 rounded-lg shadow-sm p-3">
               <table className="w-full text-sm">
@@ -299,7 +299,7 @@ export default function Home() {
                     <th className="text-center py-3 px-4 font-semibold text-gray-500">Single-sport apps</th>
                     <th className="text-center py-3 px-4 font-semibold text-gray-500">Recovery wearables</th>
                     <th className="text-center py-3 px-4 font-semibold text-gray-500">Analytics platforms</th>
-                    <th className="text-center py-3 px-4 font-semibold text-blue-600">Coach Al</th>
+                    <th className="text-center py-3 px-4 font-semibold text-blue-600">Coach AL</th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-600">
@@ -401,7 +401,7 @@ export default function Home() {
                   How is this different from Garmin Coach or Runna?
                 </h3>
                 <p className="text-gray-600">
-                  Those are single-sport tools. Coach Al plans across all your sports in one coherent system. It also adapts daily based on recovery data — not just after you hit a PB.
+                  Those are single-sport tools. Coach AL plans across all your sports in one coherent system. It also adapts daily based on recovery data — not just after you hit a PB.
                 </p>
               </div>
               <div className="p-6">
@@ -409,7 +409,7 @@ export default function Home() {
                   Is this a replacement for a human coach?
                 </h3>
                 <p className="text-gray-600">
-                  A human coach costs €200+/mo and typically handles one sport. Coach Al gives you multi-sport planning and daily adaptation for a fraction of that. It can also complement a human coach.
+                  A human coach costs €200+/mo and typically handles one sport. Coach AL gives you multi-sport planning and daily adaptation for a fraction of that. It can also complement a human coach.
                 </p>
               </div>
               <div className="p-6">
@@ -417,7 +417,7 @@ export default function Home() {
                   Is this just another static training plan?
                 </h3>
                 <p className="text-gray-600">
-                  No. Miss a week sick? Coach Al recalculates from where you actually are, not where the calendar says you should be. Static plans break. This one adapts.
+                  No. Miss a week sick? Coach AL recalculates from where you actually are, not where the calendar says you should be. Static plans break. This one adapts.
                 </p>
               </div>
               <div className="p-6">
@@ -433,7 +433,7 @@ export default function Home() {
                   What data do I need?
                 </h3>
                 <p className="text-gray-600">
-                  A Garmin watch. Coach Al reads sleep, HRV, training load, and Body Battery — data you&apos;re already collecting. No extra wearable required.
+                  A Garmin watch. Coach AL reads sleep, HRV, training load, and Body Battery — data you&apos;re already collecting. No extra wearable required.
                 </p>
               </div>
               <div className="p-6">

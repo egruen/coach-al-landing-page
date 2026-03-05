@@ -1,4 +1,4 @@
--- Coach Al Landing Page - Supabase Setup
+-- Coach AL Landing Page - Supabase Setup
 -- Run this in the Supabase SQL Editor
 
 -- Create waitlist table
@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS waitlist (
 CREATE INDEX IF NOT EXISTS idx_waitlist_email ON waitlist(email);
 
 -- Add comment to table
-COMMENT ON TABLE waitlist IS 'Email addresses for Coach Al early access waitlist';
+COMMENT ON TABLE waitlist IS 'Email addresses for Coach AL early access waitlist';
 
 -- Enable Row Level Security (RLS)
 ALTER TABLE waitlist ENABLE ROW LEVEL SECURITY;

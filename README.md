@@ -1,6 +1,6 @@
-# Coach Al Landing Page
+# Coach AL Landing Page
 
-Pre-launch landing page for Coach Al with waitlist functionality.
+Pre-launch landing page for Coach AL with waitlist functionality.
 
 ## Tech Stack
 
@@ -233,7 +233,7 @@ Before launching:
 
 ## License
 
-Proprietary - Coach Al / greenux
+Proprietary - Coach AL / greenux
 
 ## Support
 

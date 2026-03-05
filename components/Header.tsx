@@ -6,7 +6,7 @@ export default function Header() {
       <nav className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-xl font-bold text-gray-900">
-            Coach Al
+            Coach AL
           </Link>
           <div className="flex gap-6 text-sm">
             <Link href="/#how-it-works" className="text-gray-600 hover:text-gray-900 transition">

@@ -3,8 +3,8 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Imprint | Coach Al",
-  description: "Legal notice and contact information for Coach Al.",
+  title: "Imprint | Coach AL",
+  description: "Legal notice and contact information for Coach AL.",
 };
 
 export default function Imprint() {

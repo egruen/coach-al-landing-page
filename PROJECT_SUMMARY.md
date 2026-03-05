@@ -1,4 +1,4 @@
-# Coach Al Landing Page - Project Summary
+# Coach AL Landing Page - Project Summary
 
 ## Status: ✅ Complete & Shippable
 

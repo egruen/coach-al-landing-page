@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Coach Al',
-    short_name: 'Coach Al',
+    name: 'Coach AL',
+    short_name: 'Coach AL',
     description: 'Adaptive AI Coach for Real-World Training',
     start_url: '/',
     display: 'standalone',

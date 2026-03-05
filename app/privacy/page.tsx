@@ -3,8 +3,8 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Privacy Policy | Coach Al",
-  description: "Privacy policy and data protection information for Coach Al.",
+  title: "Privacy Policy | Coach AL",
+  description: "Privacy policy and data protection information for Coach AL.",
 };
 
 export default function Privacy() {
@@ -60,10 +60,10 @@ export default function Privacy() {
           <p>Your email address is used exclusively to:</p>
           <ul>
             <li>Confirm your waitlist registration</li>
-            <li>Send you updates about Coach Al's launch and early access availability</li>
+            <li>Send you updates about Coach AL's launch and early access availability</li>
           </ul>
           <p>
-            We will not send marketing emails beyond Coach Al launch communications. We will never sell, rent, or share your email with third parties for their marketing purposes.
+            We will not send marketing emails beyond Coach AL launch communications. We will never sell, rent, or share your email with third parties for their marketing purposes.
           </p>
 
           <h2>4. Third-Party Processors</h2>
@@ -110,7 +110,7 @@ export default function Privacy() {
           <p>Your email address is stored until:</p>
           <ul>
             <li>You withdraw your consent (unsubscribe), or</li>
-            <li>Coach Al launches and you either convert to a user account or are removed from the waitlist, or</li>
+            <li>Coach AL launches and you either convert to a user account or are removed from the waitlist, or</li>
             <li>12 months after signup without a product launch</li>
           </ul>
           <p>After removal, your data is permanently deleted within 30 days.</p>
