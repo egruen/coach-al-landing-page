@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WaitlistForm from "@/components/WaitlistForm";
@@ -8,27 +9,43 @@ export default function Home() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative py-16 sm:py-24 bg-[url('/hero_bg.jpg')] bg-cover bg-[top_80%_left_100%] bg-no-repeat overflow-hidden">
+        <section id="hero" className="relative py-16 sm:py-24 bg-[url('/hero_bg.jpg')] bg-cover bg-[top_80%_left_100%] bg-no-repeat overflow-hidden">
           <div className="absolute inset-0 bg-white/35" aria-hidden="true" />
           <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-4 [text-shadow:0_1px_2px_rgba(255,255,255,0.55)]">
-                Stop juggling 3 apps for 1 body
-              </p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-950 mb-6 text-balance">
-                One AI coach for all your sports.
-                <br />
-                One plan that adapts daily.
-              </h1>
-              <p className="text-xl sm:text-2xl text-gray-900 mb-12 max-w-3xl mx-auto text-balance [text-shadow:0_1px_2px_rgba(255,255,255,0.45)]">
-                Hike in March, race in May, tri in July? Coach&nbsp;Al builds one plan across every sport — and changes today&apos;s session based on how you actually slept last night.
-              </p>
-              <WaitlistForm variant="hero" />
+            <div className="relative flex flex-col md:flex-row md:items-center">
+              <div className="max-w-lg">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-4 [text-shadow:0_1px_2px_rgba(255,255,255,0.55)]">
+                  Stop juggling 3 apps for 1 body
+                </p>
+                <h1 className="text-4xl sm:text-5xl font-bold text-gray-950 mb-6 text-balance">
+                  One AI coach for every sport. One plan that adapts to your recovery, daily.
+                </h1>
+                <p className="text-lg text-gray-900 mb-8 text-balance [text-shadow:0_1px_2px_rgba(255,255,255,0.45)]">
+                  Hiking in March. MTB in May. Triathlon in July. coach-al builds one unified plan across all your sports, reads your sleep and HRV each morning, and adjusts today&apos;s session. No spreadsheets. No guessing.
+                </p>
+                <div className="max-w-md">
+                  <WaitlistForm />
+                  <p className="mt-3 text-sm text-gray-700 [text-shadow:0_1px_2px_rgba(255,255,255,0.45)]">
+                    Early adopter price — €29/mo at public launch. No credit card. Cancel anytime.
+                  </p>
+                  <p className="mt-1 text-xs text-gray-600 [text-shadow:0_1px_2px_rgba(255,255,255,0.45)]">
+                    By joining, you agree to our{" "}
+                    <Link href="/privacy" className="underline hover:text-gray-900">
+                      Privacy Policy
+                    </Link>.
+                  </p>
+                </div>
+              </div>
+
+              {/* Phone Mockup */}
+              <div className="mt-10 flex justify-center md:block md:mt-0 md:absolute md:-right-64 md:top-1/2 md:-translate-y-1/2">
+                <img src="/mockup.png" alt="coach-al app mockup" className="w-72 md:w-[700px] drop-shadow-2xl rotate-[14deg]" />
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Problem Section — "Sound familiar?" */}
+        {/* Pain Points Section — "Sound familiar?" */}
         <section className="bg-gray-50 py-16 sm:py-24">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
@@ -39,39 +56,27 @@ export default function Home() {
             </p>
             <div className="max-w-3xl mx-auto grid sm:grid-cols-2 gap-6">
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                <p className="font-semibold text-gray-900 mb-2">You use 3 apps and none of them talk</p>
+                <p className="font-semibold text-gray-900 mb-2">Three apps, one body</p>
                 <p className="text-gray-600 text-sm">
-                  One app for running, another for cycling, a third for strength. Three plans, zero coordination. Your body doesn&apos;t train in silos — but your apps do.
+                  Your cycling app doesn&apos;t know you did squats yesterday. Your running app doesn&apos;t know you race in 15 days. You&apos;re the only one connecting the dots.
                 </p>
               </div>
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                <p className="font-semibold text-gray-900 mb-2">The plan breaks when life happens</p>
+                <p className="font-semibold text-gray-900 mb-2">Miss 5 days? Plan doesn&apos;t care.</p>
                 <p className="text-gray-600 text-sm">
-                  You get sick. Miss a week. Come back and the plan picks up where you &quot;should&quot; be — ignoring you just spent 5 days on the couch. That&apos;s not adaptive. That&apos;s a spreadsheet.
+                  You get sick. The plan picks up where you &quot;should&quot; be, not where you actually are. Static plans punish real life.
                 </p>
               </div>
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                <p className="font-semibold text-gray-900 mb-2">&quot;AI&quot; that only adjusts after a PB</p>
+                <p className="font-semibold text-gray-900 mb-2">47 metrics. Zero answers.</p>
                 <p className="text-gray-600 text-sm">
-                  Your watch knows you slept 4 hours. Your training app doesn&apos;t care. It prescribes the same intervals anyway and calls it &quot;AI-powered.&quot;
+                  Your watch says you&apos;re tired. Great. Now what? CTL, ATL, TSB, HRV — none of it tells you what to do today.
                 </p>
               </div>
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                <p className="font-semibold text-gray-900 mb-2">Data everywhere, direction nowhere</p>
+                <p className="font-semibold text-gray-900 mb-2">15 hours a week? Not your life.</p>
                 <p className="text-gray-600 text-sm">
-                  Recovery scores, strain charts, TSS curves, CTL ratios. 47 metrics and still no answer to the only question that matters: &quot;What do I do today?&quot;
-                </p>
-              </div>
-              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                <p className="font-semibold text-gray-900 mb-2">Too intense → burnout in 6 months</p>
-                <p className="text-gray-600 text-sm">
-                  Three hard sessions a week, every week. You start dreading runs. The app doesn&apos;t enforce easy days — so you never actually recover.
-                </p>
-              </div>
-              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                <p className="font-semibold text-gray-900 mb-2">Built for pros, not parents</p>
-                <p className="text-gray-600 text-sm">
-                  15-hour training weeks. Minimum 5 sessions required. Built for people without jobs, kids, or a 6am school run.
+                  Most plans assume you can train like a pro. You have a job, kids, and 7–10 hours at best. Where&apos;s the plan that fits?
                 </p>
               </div>
             </div>
@@ -82,7 +87,7 @@ export default function Home() {
         <section id="how-it-works" className="bg-white py-16 sm:py-24">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-              How Coach AL works
+              How coach-al works
             </h2>
             <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
               Three steps. One plan. Every sport covered.
@@ -96,7 +101,7 @@ export default function Home() {
                   Add your events
                 </h3>
                 <p className="text-gray-600">
-                  A trek in March, a race in May, a tri in July. Coach AL builds one phased plan that prepares you for each deadline — no overlapping chaos, no manual replanning.
+                  GR221 in March, MTB race in May, triathlon in July? Add them all. coach-al auto-phases your training — works backward from each date, across sports, in one plan.
                 </p>
               </div>
               <div className="text-center px-2">
@@ -104,10 +109,10 @@ export default function Home() {
                   2
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Connect your fitness tracker
+                  Connect your watch
                 </h3>
                 <p className="text-gray-600">
-                  Sleep, HRV, training load, Body Battery — Coach AL reads your recovery state every day. Bad night? Today&apos;s session adapts before you lace up.
+                  Garmin, Apple Watch, Polar, Wahoo — coach-al reads your sleep, HRV, training load, and readiness score every morning. Real data, not questionnaires.
                 </p>
               </div>
               <div className="text-center px-2">
@@ -115,88 +120,70 @@ export default function Home() {
                   3
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Wake up. Train. Done.
+                  Wake up. See today&apos;s session. Done.
                 </h3>
                 <p className="text-gray-600">
-                  Check your phone. See today&apos;s session. No charts to interpret, no zones to calculate, no second-guessing. Just do the work.
+                  One screen. One session. Adjusted for how you actually recovered. No spreadsheets, no PMC charts, no calculating.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Differentiators Section */}
+        {/* Product Demo Section — "See what changes" */}
         <section className="bg-gray-50 py-16 sm:py-24">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-              What makes Coach AL different
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">
+              See what changes
             </h2>
-            <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-              Not another tracker. Not another dashboard. An actual coach.
-            </p>
-            <div className="grid sm:grid-cols-2 gap-x-10 gap-y-10 lg:gap-x-14">
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  🎯 Event-driven, not sport-locked
-                </h3>
-                <p className="text-gray-600">
-                  You don&apos;t train &quot;for cycling.&quot; You train for Bike The Rock on May 16. Coach AL works backward from your event dates and phases your training automatically — then transitions to the next goal.
-                </p>
+            <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+              {/* Panel 1 — Good sleep */}
+              <div className="bg-white border border-green-200 rounded-lg overflow-hidden shadow-sm">
+                <div className="bg-green-50 px-5 py-3 border-b border-green-200">
+                  <p className="text-sm font-semibold text-green-800">😴 You slept well</p>
+                </div>
+                <div className="p-5">
+                  <p className="text-xs text-gray-500 font-medium">Wednesday</p>
+                  <p className="text-lg font-bold text-gray-900 mt-1">Threshold Run · 55 min</p>
+                  <p className="text-sm text-gray-600 mt-1">4 × 8 min at tempo pace</p>
+                  <p className="text-xs text-gray-500 mt-2">Goal: Build lactate threshold</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  🔄 Recovery drives the plan, not the calendar
-                </h3>
-                <p className="text-gray-600">
-                  Most apps schedule deload every 4th week — even if you&apos;re fine, or wrecked on week 2. Coach AL reads HRV, sleep, and cumulative load, then decides. Feedback loops beat calendars.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  💪 Strength is built in, not bolted on
-                </h3>
-                <p className="text-gray-600">
-                  Hiking prep needs lower body and core work. Coach AL schedules strength sessions around your endurance training — not as a separate app you have to manage yourself.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  ⏱️ Under 10 hours a week
-                </h3>
-                <p className="text-gray-600">
-                  You have a job, kids, and a life. Coach AL builds plans that fit your actual time — not a pro athlete&apos;s schedule. If the plan can&apos;t survive real life, it&apos;s a bad plan.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  🧠 AI that observes, decides, and acts
-                </h3>
-                <p className="text-gray-600">
-                  Not an AI that writes motivational paragraphs about your run. Not pace adjustments after a PB. Coach AL reads your data and changes your plan. Every day.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  💰 One coach replaces three
-                </h3>
-                <p className="text-gray-600">
-                  A human running coach: €200/mo. A cycling coach: €150/mo. A strength coach: €100/mo. Coach AL handles all your sports for a fraction of one.
-                </p>
+              {/* Panel 2 — Poor sleep */}
+              <div className="bg-white border border-amber-200 rounded-lg overflow-hidden shadow-sm">
+                <div className="bg-amber-50 px-5 py-3 border-b border-amber-200">
+                  <p className="text-sm font-semibold text-amber-800">😵 You slept 4 hours</p>
+                </div>
+                <div className="p-5">
+                  <p className="text-xs text-gray-500 font-medium">Wednesday</p>
+                  <p className="text-lg font-bold text-gray-900 mt-1">Easy Run · 40 min</p>
+                  <p className="text-sm text-gray-600 mt-1">Zone 2, conversational pace</p>
+                  <div className="bg-amber-50 border border-amber-200 rounded p-2 mt-3">
+                    <p className="text-xs text-amber-800">⚡ Adjusted: Poor sleep detected. Tempo moved to Friday.</p>
+                  </div>
+                </div>
               </div>
             </div>
+            <p className="text-center text-gray-600 mt-8 max-w-xl mx-auto">
+              Same day, different recovery. coach-al doesn&apos;t just track your data — it changes your plan.
+            </p>
           </div>
         </section>
 
-        {/* The Story — Social Proof / Real Test */}
+        {/* Proof of Concept — Founder + Events */}
         <section className="bg-white py-16 sm:py-24">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-                The proof is in the prep
+                Built by an athlete, for athletes
               </h2>
-              <p className="text-lg text-gray-600 text-center mb-12">
-                Coach AL is being built and tested in public — by the founder training for 5 events across 5 sports in 5 months. Real sessions, real data, real adaptation.
-              </p>
+
+              {/* Founder Card */}
+              <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-12">
+                <p className="text-gray-900">
+                  <span className="font-semibold">Eduard, 40</span> — Father of four. Full-time job. University lecturer. Training 8–10 hours a week for 5 events across 5 sports in 2026. coach-al is the coach he needed and couldn&apos;t find.
+                </p>
+              </div>
 
               {/* Event Timeline */}
               <div className="space-y-2">
@@ -234,10 +221,10 @@ export default function Home() {
                   <span className="text-2xl" aria-hidden="true">🏔️</span>
                   <div>
                     <div className="flex flex-wrap items-baseline gap-2">
-                      <h3 className="font-semibold text-gray-900">Watzmann Überschreitung</h3>
+                      <h3 className="font-semibold text-gray-900">Watzmann Traverse</h3>
                       <span className="text-sm text-gray-500">July 15–20</span>
                     </div>
-                    <p className="text-gray-600 text-sm mt-1">Alpine ridge traverse — exposed scrambling, multi-day</p>
+                    <p className="text-gray-600 text-sm mt-1">Alpine ridge crossing — exposed scrambling, multi-day</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 py-4 pl-4 border-l-2 border-gray-200">
@@ -254,7 +241,7 @@ export default function Home() {
 
               <div className="mt-8 text-center">
                 <p className="text-lg font-medium text-gray-900">
-                  5 events. 5 sports. Under 10 hours per week. One AI coach.
+                  5 events. 5 sports. Under 10 hours a week. One AI coach.
                 </p>
                 <p className="text-gray-600 mt-2">
                   Every session, every adaptation, every result — shared publicly. Follow the build.
@@ -282,68 +269,83 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Comparison Section — vs Alternatives */}
+        {/* Mid-Page CTA */}
+        <section className="bg-blue-600 py-16 sm:py-20">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Early adopter spots open
+            </h2>
+            <p className="text-lg text-blue-100 mb-8">
+              €9/month, locked in forever. Price goes to €29 at public launch.
+            </p>
+            <div className="max-w-md mx-auto">
+              <WaitlistForm buttonText="Claim Your Spot" />
+            </div>
+            <p className="mt-4 text-sm text-blue-200">
+              Spring 2026 launch. Waitlist gets first access.
+            </p>
+          </div>
+        </section>
+
+        {/* Comparison Table — Named Competitors */}
         <section className="bg-gray-50 py-16 sm:py-24">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-              You&apos;ve tried the alternatives
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">
+              How coach-al compares
             </h2>
-            <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-              Here&apos;s how Coach AL fills the gaps they leave.
-            </p>
-            <div className="max-w-3xl mx-auto overflow-x-auto bg-white border border-gray-200 rounded-lg shadow-sm p-3">
+            <div className="max-w-4xl mx-auto overflow-x-auto bg-white border border-gray-200 rounded-lg shadow-sm p-3">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-gray-200">
                     <th className="text-left py-3 pr-4 font-semibold text-gray-900"></th>
-                    <th className="text-center py-3 px-4 font-semibold text-gray-500">Single-sport apps</th>
-                    <th className="text-center py-3 px-4 font-semibold text-gray-500">Recovery wearables</th>
-                    <th className="text-center py-3 px-4 font-semibold text-gray-500">Analytics platforms</th>
-                    <th className="text-center py-3 px-4 font-semibold text-blue-600">Coach AL</th>
+                    <th className="text-center py-3 px-3 font-semibold text-gray-500">TrainingPeaks</th>
+                    <th className="text-center py-3 px-3 font-semibold text-gray-500">TrainerRoad</th>
+                    <th className="text-center py-3 px-3 font-semibold text-gray-500">Garmin Coach</th>
+                    <th className="text-center py-3 px-3 font-semibold text-blue-600">coach-al</th>
                   </tr>
                 </thead>
-                <tbody className="text-gray-600">
+                <tbody className="text-gray-600 text-xs sm:text-sm">
                   <tr className="border-b border-gray-200">
-                    <td className="py-3 pr-4 font-medium text-gray-900">Multi-sport plan</td>
-                    <td className="text-center py-3 px-4">❌</td>
-                    <td className="text-center py-3 px-4">❌</td>
-                    <td className="text-center py-3 px-4">❌</td>
-                    <td className="text-center py-3 px-4">✅</td>
+                    <td className="py-3 pr-4 font-medium text-gray-900">Multi-sport unified plan</td>
+                    <td className="text-center py-3 px-3">Manual only</td>
+                    <td className="text-center py-3 px-3">Cycling-first</td>
+                    <td className="text-center py-3 px-3">Per sport</td>
+                    <td className="text-center py-3 px-3 font-medium text-blue-600">All sports, one plan</td>
                   </tr>
                   <tr className="border-b border-gray-200">
-                    <td className="py-3 pr-4 font-medium text-gray-900">Daily adaptation</td>
-                    <td className="text-center py-3 px-4">⚠️</td>
-                    <td className="text-center py-3 px-4">❌</td>
-                    <td className="text-center py-3 px-4">❌</td>
-                    <td className="text-center py-3 px-4">✅</td>
+                    <td className="py-3 pr-4 font-medium text-gray-900">Daily recovery adaptation</td>
+                    <td className="text-center py-3 px-3">No</td>
+                    <td className="text-center py-3 px-3">No</td>
+                    <td className="text-center py-3 px-3">Basic</td>
+                    <td className="text-center py-3 px-3 font-medium text-blue-600">HRV + sleep driven</td>
                   </tr>
                   <tr className="border-b border-gray-200">
-                    <td className="py-3 pr-4 font-medium text-gray-900">Tells you what to do</td>
-                    <td className="text-center py-3 px-4">✅</td>
-                    <td className="text-center py-3 px-4">❌</td>
-                    <td className="text-center py-3 px-4">❌</td>
-                    <td className="text-center py-3 px-4">✅</td>
+                    <td className="py-3 pr-4 font-medium text-gray-900">Strength-endurance integration</td>
+                    <td className="text-center py-3 px-3">No</td>
+                    <td className="text-center py-3 px-3">No</td>
+                    <td className="text-center py-3 px-3">Basic</td>
+                    <td className="text-center py-3 px-3 font-medium text-blue-600">Single fatigue model</td>
                   </tr>
                   <tr className="border-b border-gray-200">
-                    <td className="py-3 pr-4 font-medium text-gray-900">Reads recovery data</td>
-                    <td className="text-center py-3 px-4">⚠️</td>
-                    <td className="text-center py-3 px-4">✅</td>
-                    <td className="text-center py-3 px-4">✅</td>
-                    <td className="text-center py-3 px-4">✅</td>
+                    <td className="py-3 pr-4 font-medium text-gray-900">Event-driven periodization</td>
+                    <td className="text-center py-3 px-3">Manual</td>
+                    <td className="text-center py-3 px-3">Cycling events</td>
+                    <td className="text-center py-3 px-3">Single goal</td>
+                    <td className="text-center py-3 px-3 font-medium text-blue-600">Multiple events, auto-phased</td>
                   </tr>
                   <tr className="border-b border-gray-200">
-                    <td className="py-3 pr-4 font-medium text-gray-900">Event-driven phasing</td>
-                    <td className="text-center py-3 px-4">❌</td>
-                    <td className="text-center py-3 px-4">❌</td>
-                    <td className="text-center py-3 px-4">❌</td>
-                    <td className="text-center py-3 px-4">✅</td>
+                    <td className="py-3 pr-4 font-medium text-gray-900">Time-constrained planning</td>
+                    <td className="text-center py-3 px-3">No</td>
+                    <td className="text-center py-3 px-3">Partial</td>
+                    <td className="text-center py-3 px-3">Partial</td>
+                    <td className="text-center py-3 px-3 font-medium text-blue-600">Built for &lt;10h/week</td>
                   </tr>
                   <tr>
-                    <td className="py-3 pr-4 font-medium text-gray-900">Strength integrated</td>
-                    <td className="text-center py-3 px-4">❌</td>
-                    <td className="text-center py-3 px-4">❌</td>
-                    <td className="text-center py-3 px-4">❌</td>
-                    <td className="text-center py-3 px-4">✅</td>
+                    <td className="py-3 pr-4 font-medium text-gray-900">Price</td>
+                    <td className="text-center py-3 px-3">€12–20/mo</td>
+                    <td className="text-center py-3 px-3">€16/mo</td>
+                    <td className="text-center py-3 px-3">Free (Garmin only)</td>
+                    <td className="text-center py-3 px-3 font-bold text-blue-600">€9/mo (early adopter)</td>
                   </tr>
                 </tbody>
               </table>
@@ -351,46 +353,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Who It's For Section */}
-        <section className="bg-white py-16 sm:py-24">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">
-              Built for athletes like you
-            </h2>
-            <div className="grid md:grid-cols-3 gap-10 lg:gap-12">
-              <div className="text-center px-2">
-                <div className="text-4xl mb-4">🥾</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  The adventurer
-                </h3>
-                <p className="text-gray-600">
-                  Training for a trek, a bike-packing trip, or a trail race. Not chasing podiums — just want to finish strong without guessing the prep.
-                </p>
-              </div>
-              <div className="text-center px-2">
-                <div className="text-4xl mb-4">🏆</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  The age-grouper
-                </h3>
-                <p className="text-gray-600">
-                  Competitive at local races across multiple sports. Has a job and kids. Can&apos;t train like a pro — needs every hour to count.
-                </p>
-              </div>
-              <div className="text-center px-2">
-                <div className="text-4xl mb-4">🔄</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  The cross-trainer
-                </h3>
-                <p className="text-gray-600">
-                  Skis in winter, bikes in summer, runs in fall. Tired of losing fitness every time the season changes. Wants one system that manages it all.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* FAQ Section */}
-        <section id="faq" className="bg-gray-50 py-16 sm:py-24">
+        <section id="faq" className="bg-white py-16 sm:py-24">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">
               FAQ
@@ -398,50 +362,34 @@ export default function Home() {
             <div className="bg-white border border-gray-200 rounded-lg divide-y divide-gray-200">
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  How is this different from Garmin Coach or Runna?
+                  What about Garmin Coach? It&apos;s free.
                 </h3>
                 <p className="text-gray-600">
-                  Those are single-sport tools. Coach AL plans across all your sports in one coherent system. It also adapts daily based on recovery data — not just after you hit a PB.
+                  Garmin Coach creates single-sport plans with basic adaptation. It can&apos;t coordinate your hike prep, MTB training, and strength work into one plan, and it doesn&apos;t adjust today&apos;s session based on last night&apos;s sleep. coach-al does.
                 </p>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Is this a replacement for a human coach?
+                  Does this replace a human coach?
                 </h3>
                 <p className="text-gray-600">
-                  A human coach costs €200+/mo and typically handles one sport. Coach AL gives you multi-sport planning and daily adaptation for a fraction of that. It can also complement a human coach.
+                  For multi-sport athletes training under 10 hours a week, yes. A cycling coach costs €200/mo. A running coach costs €150/mo. A strength coach costs €100/mo. coach-al covers all three for €9/mo as an early adopter.
                 </p>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Is this just another static training plan?
+                  How does daily adaptation work?
                 </h3>
                 <p className="text-gray-600">
-                  No. Miss a week sick? Coach AL recalculates from where you actually are, not where the calendar says you should be. Static plans break. This one adapts.
+                  Every morning, coach-al reads your recovery data (HRV, sleep, readiness). If you slept poorly, today&apos;s tempo run becomes an easy recovery session. The missed intensity gets rescheduled — not lost. The plan adapts to your life, not the other way around.
                 </p>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Which sports are supported?
+                  When does it launch?
                 </h3>
                 <p className="text-gray-600">
-                  Running, cycling, hiking, swimming, and strength. Built for endurance and mountain athletes who train across multiple disciplines.
-                </p>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  What data do I need?
-                </h3>
-                <p className="text-gray-600">
-                  A fitness watch. Coach AL reads sleep, HRV, training load, and Body Battery — data you&apos;re already collecting. No extra wearable required.
-                </p>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  When does access open?
-                </h3>
-                <p className="text-gray-600">
-                  Early access starts spring 2026. Join the waitlist — first in line gets first access.
+                  Early access launches spring 2026. Waitlist members get first access and the €9/month early adopter price locked forever.
                 </p>
               </div>
             </div>
@@ -452,13 +400,22 @@ export default function Home() {
         <section className="bg-gray-50 py-16 sm:py-24">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Stop juggling apps. Start training.
+              Your coach is almost ready.
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              One coach. Every sport. Adapts daily. Join the waitlist.
+              One plan. Every sport. Adapts daily to your recovery. Join the waitlist to lock in €9/month — forever.
             </p>
             <div className="max-w-md mx-auto">
-              <WaitlistForm variant="cta" />
+              <WaitlistForm buttonText="Claim Your Early Adopter Spot" />
+              <p className="mt-3 text-sm text-gray-500">
+                €29/mo at public launch. No credit card required. Cancel anytime.
+              </p>
+              <p className="mt-1 text-xs text-gray-400">
+                By joining, you agree to our{" "}
+                <Link href="/privacy" className="underline hover:text-gray-600">
+                  Privacy Policy
+                </Link>.
+              </p>
             </div>
           </div>
         </section>

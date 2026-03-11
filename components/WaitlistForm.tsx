@@ -1,25 +1,18 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import Link from "next/link";
 
 interface WaitlistFormProps {
-  variant?: "hero" | "cta";
+  buttonText?: string;
 }
 
-export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
+export default function WaitlistForm({ buttonText = "Lock in €9/mo forever" }: WaitlistFormProps) {
   const [email, setEmail] = useState("");
-  const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    
-    if (!consent) {
-      setErrorMessage("Please accept the privacy policy to continue.");
-      return;
-    }
 
     setStatus("loading");
     setErrorMessage("");
@@ -41,7 +34,6 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
 
       setStatus("success");
       setEmail("");
-      setConsent(false);
     } catch (error) {
       setStatus("error");
       setErrorMessage(error instanceof Error ? error.message : "Failed to join waitlist");
@@ -50,23 +42,16 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
 
   if (status === "success") {
     return (
-      <div className={`${variant === "hero" ? "max-w-md mx-auto" : ""}`}>
-        <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
-          <p className="text-green-800 font-medium">
-            You're in. We'll contact you when early access opens.
-          </p>
-        </div>
+      <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
+        <p className="text-green-800 font-medium">
+          You&apos;re in. We&apos;ll contact you when early access opens.
+        </p>
       </div>
     );
   }
 
-  const inputFocusClass = "focus:ring-blue-500";
-  const buttonClass = "bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white";
-  const privacyLinkClass = "text-blue-600 hover:text-blue-700";
-  const consentTextClass = "text-gray-600";
-
   return (
-    <form onSubmit={handleSubmit} className={`${variant === "hero" ? "max-w-md mx-auto" : ""}`}>
+    <form onSubmit={handleSubmit}>
       <div className="flex flex-col sm:flex-row gap-3">
         <input
           type="email"
@@ -75,34 +60,15 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
           placeholder="you@domain.com"
           required
           disabled={status === "loading"}
-          className={`flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 ${inputFocusClass} focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed bg-white text-gray-900`}
+          className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed bg-white text-gray-900"
         />
         <button
           type="submit"
           disabled={status === "loading"}
-          className={`px-6 py-3 ${buttonClass} font-medium rounded-lg transition disabled:cursor-not-allowed whitespace-nowrap`}
+          className="px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium rounded-lg transition disabled:cursor-not-allowed whitespace-nowrap"
         >
-          {status === "loading" ? "Joining..." : variant === "hero" ? "Get Early Access" : "Join Waitlist"}
+          {status === "loading" ? "Joining..." : buttonText}
         </button>
-      </div>
-      
-      <div className="mt-3">
-        <label className={`flex items-start gap-2 text-sm ${consentTextClass} cursor-pointer`}>
-          <input
-            type="checkbox"
-            checked={consent}
-            onChange={(e) => setConsent(e.target.checked)}
-            disabled={status === "loading"}
-            className="mt-0.5 cursor-pointer"
-            required
-          />
-          <span>
-            I agree to the{" "}
-            <Link href="/privacy" className={`${privacyLinkClass} underline`}>
-              Privacy Policy
-            </Link>
-          </span>
-        </label>
       </div>
 
       {errorMessage && (
