@@ -23,6 +23,9 @@ export default function Footer() {
             <Link href="/privacy" className="text-gray-600 hover:text-gray-900 transition">
               Privacy
             </Link>
+            <Link href="/datenschutz" className="text-gray-600 hover:text-gray-900 transition">
+              Datenschutz App
+            </Link>
           </div>
         </div>
       </div>
